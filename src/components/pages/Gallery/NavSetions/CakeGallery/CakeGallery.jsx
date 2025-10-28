@@ -4,68 +4,123 @@ import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 //Birthday Cakes
-//import creamCake from "../../../../../assets/Images/GalleryImages/Cakes/creamCake.jpg";
-import flowerCake from "../../../../../assets/Images/GalleryImages/Cakes/flowerCake.jpg";
-import creamPinkCake from "../../../../../assets/Images/GalleryImages/Cakes/creamPinkCake.jpg";
-import cakeDecor from "../../../../../assets/Images/GalleryImages/Cakes/cakeDecor.jpg";
-import yellowCake from "../../../../../assets/Images/GalleryImages/Cakes/yellowCake.jpg";
-import womanCake from "../../../../../assets/Images/GalleryImages/Cakes/womanCake.jpg";
-import Bcake from "../../../../../assets/Images/GalleryImages/Cakes/Bcake.jpg";
-import pawsCake from "../../../../../assets/Images/GalleryImages/Cakes/pawsCake.jpg";
-import barbieCake from "../../../../../assets/Images/GalleryImages/Cakes/barbieCake.jpg";
-import sofiaCake from "../../../../../assets/Images/GalleryImages/Cakes/sofiaCake.jpg";
-import mickyCake from "../../../../../assets/Images/GalleryImages/Cakes/mickyCake.jpg";
-import whiteDarkCake from "../../../../../assets/Images/GalleryImages/Cakes/whiteDarkCake.jpg";
-import manCake from "../../../../../assets/Images/GalleryImages/Cakes/70Cake.jpg";
-import orangeChocoCake from "../../../../../assets/Images/GalleryImages/Cakes/orangeChocoCake.jpg";
-import pinkCreamCake from "../../../../../assets/Images/GalleryImages/Cakes/pinkCreamCake.jpg";
-import whiteChocoPinkCake from "../../../../../assets/Images/GalleryImages/Cakes/whiteChocoPinkCake.jpg";
-import hexagonCake from "../../../../../assets/Images/GalleryImages/Cakes/hexagonCake.jpg";
-import bCake17 from "../../../../../assets/Images/GalleryImages/Cakes/bCake17.jpg";
-import bCake18 from "../../../../../assets/Images/GalleryImages/Cakes/bCake18.jpg";
-import babyCake from "../../../../../assets/Images/GalleryImages/Cakes/babyCake.jpg";
-import churchAnniversary from "../../../../../assets/Images/GalleryImages/Cakes/churchAnniversary.jpg";
-import bCake19 from "../../../../../assets/Images/GalleryImages/Cakes/bCake19.jpg";
-import bCake20 from "../../../../../assets/Images/GalleryImages/Cakes/bCake20.jpg";
-import bCake21 from "../../../../../assets/Images/GalleryImages/Cakes/bCake21.jpg";
-import bCake22 from "../../../../../assets/Images/GalleryImages/Cakes/bCake22.jpg";
-import bCake23 from "../../../../../assets/Images/GalleryImages/Cakes/bCake23.jpg";
-import bCake24 from "../../../../../assets/Images/GalleryImages/Cakes/bCake24.jpg";
-import bCake25 from "../../../../../assets/Images/GalleryImages/Cakes/bCake25.jpg";
-import bCake26 from "../../../../../assets/Images/GalleryImages/Cakes/bCake26.jpg";
-import bCake27 from "../../../../../assets/Images/GalleryImages/Cakes/bCake27.jpg";
-import bCake28 from "../../../../../assets/Images/GalleryImages/Cakes/bCake28.jpg";
+const flowerCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439480/flowerCake_ogouvd.jpg";
+const creamPinkCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439456/creamPinkCake_skcmzd.jpg";
+const cakeDecor =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439452/cakeDecor_vsjdn9.jpg";
+
+const yellowCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439489/yellowCake_qv4uxc.jpg";
+const womanCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439541/womanCake_tsdhlm.jpg";
+const Bcake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439451/Bcake_uo2nhz.jpg";
+const pawsCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439723/pawsCake_jhy30r.jpg";
+const barbieCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439769/barbieCake_tpjqi1.jpg";
+const sofiaCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439559/sofiaCake_jlyp7t.jpg";
+const mickyCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439548/mickyCake_t29iws.jpg";
+const whiteDarkCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439489/whiteDarkCake_wed4oe.jpg";
+const manCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439490/70Cake_eeescj.jpg";
+const orangeChocoCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439482/orangeChocoCake_ihopx0.jpg";
+const pinkCreamCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439486/pinkCreamCake_i1m0f7.jpg";
+const whiteChocoPinkCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439489/whiteChocoPinkCake_tkom5g.jpg";
+const hexagonCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439485/hexagonCake_kpqmu4.jpg";
+const bCake17 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439451/bCake17_javu5n.jpg";
+const bCake18 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439451/bCake18_vpwloq.jpg";
+const babyCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439673/babyCake_pddkkh.jpg";
+const churchAnniversary =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755520069/churchAnniversary_z6sdtf.jpg";
+const bCake19 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439746/bCake19_e0ri47.jpg";
+const bCake20 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439748/bCake20_mub9mv.jpg";
+const bCake21 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439672/bCake21_ryadxh.jpg";
+const bCake22 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439622/bCake22_tontpk.jpg";
+const bCake23 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439756/bCake23_xbgzg2.jpg";
+const bCake24 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439737/bCake24_xwr2yc.jpg";
+const bCake25 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439746/bCake25_czcuq2.jpg";
+const bCake26 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439766/bCake26_fpgcji.jpg";
+const bCake27 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439799/bCake27_rigkl9.jpg";
+const bCake28 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439889/bCake28_owcwkj.jpg";
 
 //Wedding Cake
-import wedCake from "../../../../../assets/Images/GalleryImages/Cakes/wedCake1.jpg";
-import wedCake2 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake2.jpg";
-import whiteBlueCake from "../../../../../assets/Images/GalleryImages/Cakes/whiteBlueCake.jpg";
-import wedCake3 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake3.jpg";
-import wedCake4 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake4.jpg";
-import wedCake5 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake5.jpg";
-import wedCake6 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake6.jpg";
-import wedCake7 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake7.jpg";
-import wedCake8 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake8.jpg";
-import wedCake9 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake9.jpg";
-import wedCake10 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake10.jpg";
-import wedCake11 from "../../../../../assets/Images/GalleryImages/Cakes/weddingCake.jpg";
-import wedCake12 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake12.jpg";
-import wedCake13 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake13.jpg";
-import wedCake14 from "../../../../../assets/Images/GalleryImages/Cakes/wedCake14.jpg";
-
+const wedCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439488/wedCake1_mgw1p0.jpg";
+const wedCake2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439637/wedCake2_jeb8hu.jpg";
+const whiteBlueCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439489/whiteBlueCake_kqywwr.jpg";
+const wedCake3 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439630/wedCake3_fcgtgd.jpg";
+const wedCake4 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439684/wedCake4_jrmmmz.jpg";
+const wedCake5 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439756/wedCake5_apobca.jpg";
+const wedCake6 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439722/wedCake6_hzq6xi.jpg";
+const wedCake7 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439763/wedCake7_vqciud.jpg";
+const wedCake8 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439738/wedCake8_cte0wd.jpg";
+const wedCake9 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439733/wedCake9_jw26n4.jpg";
+const wedCake10 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439726/wedCake10_hcruje.jpg";
+const wedCake11 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439488/weddingCake_xqlrq1.jpg";
+const wedCake12 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439725/wedCake12_hmul3j.jpg";
+const wedCake13 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439488/wedCake13_hrpgbv.jpg";
+const wedCake14 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439532/wedCake14_pbcrg1.jpg";
+ 
 //Graduation Cake
-import graduationCake1 from "../../../../../assets/Images/GalleryImages/Cakes/graduationCake1.jpg";
-import graduationCake2 from "../../../../../assets/Images/GalleryImages/Cakes/graduationCake2.jpg";
-import graduationCake3 from "../../../../../assets/Images/GalleryImages/Cakes/graduationCake3.jpg";
-import graduationCake4 from "../../../../../assets/Images/GalleryImages/Cakes/graduationCake4.jpg";
-import graduationCake5 from "../../../../../assets/Images/GalleryImages/Cakes/graduationCake5.jpg";
+const graduationCake1 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439484/graduationCake1_zvtayy.jpg";
+const graduationCake2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439827/graduationCake2_g93xr3.jpg";
+const graduationCake3 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439470/graduationCake3_jgtjks.jpg";
+const graduationCake4 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439865/graduationCake4_ah49kr.jpg";
+const graduationCake5 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439484/graduationCake5_e7hshh.jpg";
 
 //Cup Cakes Cake
-import cupCakes1 from "../../../../../assets/Images/GalleryImages/Cakes/cupCakes1.jpg";
-import cupCakes2 from "../../../../../assets/Images/GalleryImages/Cakes/cupCakes2.jpg";
-import cupCakes3 from "../../../../../assets/Images/GalleryImages/Cakes/cupCakes3.jpg";
-import cupCakes4 from "../../../../../assets/Images/GalleryImages/Cakes/cupCakes4.jpg";
-import cupCakes5 from "../../../../../assets/Images/GalleryImages/Cakes/cupCake5.jpg";
+const cupCakes1 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439463/cupCakes1_t5vdzb.jpg";
+const cupCakes2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439468/cupCakes2_maozvw.jpg";
+const cupCakes3 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439484/cupCakes3_wtr6yu.jpg";
+const cupCakes4 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439484/cupCakes4_qq6wbb.jpg";
+const cupCakes5 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439465/cupCake5_tlimkg.jpg";
 
 export default function CakeGallery() {
   //for the Images

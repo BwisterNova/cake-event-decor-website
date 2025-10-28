@@ -1,55 +1,97 @@
 import styles from "./decorations.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 //Wedding Decorations Images
-import wedDecor from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor.jpg";
-import wedDecor2 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor2.jpg";
-import wedDecor3 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor3.jpg";
-import wedDecor4 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor4.jpg";
-import wedDecor5 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor5.jpg";
-import wedDecor6 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor6.jpg";
-import wedDecor7 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor7.jpg";
-import wedDecor8 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor8.jpg";
-import wedDecor9 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor9.jpg";
-import wedDecor10 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor10.jpg";
-import wedDecor11 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor11.jpg";
-import wedDecor12 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor12.jpg";
-import wedDecor13 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor13.jpg";
-import wedDecor14 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor14.jpg";
-import wedDecor15 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor15.jpg";
-import wedDecor16 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor16.jpg";
-import wedDecor17 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor17.jpg";
-import wedDecor18 from "../../../../../assets/Images/GalleryImages/Decorations/wedDecor18.jpg";
+const wedDecor =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439953/wedDecor_e6yacq.jpg";
+const wedDecor2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439959/wedDecor2_sayfr8.jpg";
+const wedDecor3 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440131/wedDecor3_kjbsij.jpg";
+const wedDecor4 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439983/wedDecor4_jpmcgl.jpg";
+const wedDecor5 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439964/wedDecor5_xvcmbj.jpg";
+const wedDecor6 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440131/wedDecor6_rzmoiw.jpg";
+const wedDecor7 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440064/wedDecor7_cwmtgq.jpg";
+const wedDecor8 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440022/wedDecor8_uoz4mo.jpg";
+const wedDecor9 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440134/wedDecor9_fhhxd8.jpg";
+const wedDecor10 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440056/wedDecor10_lwtipu.jpg";
+const wedDecor11 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440077/wedDecor11_dcm0df.jpg";
+const wedDecor12 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440128/wedDecor12_uovhkz.jpg";
+const wedDecor13 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439971/wedDecor13_clkxbo.jpg";
+const wedDecor14 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439954/wedDecor14_wuwucz.jpg";
+const wedDecor15 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439966/wedDecor15_xizwk0.jpg";
+const wedDecor16 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439982/wedDecor16_lk0tv2.jpg";
+const wedDecor17 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439956/wedDecor17_fzypa5.jpg";
+const wedDecor18 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439974/wedDecor18_cctrkt.jpg";
 
 //Events Decoration
-import EventDecor1 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor1.jpg";
-import EventDecor2 from "../../../../../assets/Images/GalleryImages/Decorations/wineWhiteDecor.jpg";
-import EventDecor3 from "../../../../../assets/Images/GalleryImages/Decorations/yellowBlueDecor.jpg";
-import EventDecor4 from "../../../../../assets/Images/GalleryImages/Decorations/decor2.jpg";
-import EventDecor5 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor5.jpg";
-import EventDecor6 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor6.jpg";
-import EventDecor7 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor7.jpg";
-import EventDecor8 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor8.jpg";
-import EventDecor9 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor9.jpg";
-import EventDecor10 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor10.jpg";
-import EventDecor11 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor11.jpg";
-import EventDecor12 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor12.jpg";
-import EventDecor13 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor13.jpg";
-import EventDecor14 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor14.jpg";
-import EventDecor15 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor15.jpg";
-import EventDecor16 from "../../../../../assets/Images/GalleryImages/Decorations/EventDecor16.jpg";
+const EventDecor1 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439936/EventDecor1_ykbqig.jpg";
+const EventDecor2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439954/wineWhiteDecor_qmgzkw.jpg";
+const EventDecor3 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439956/yellowBlueDecor_jhdxwi.jpg";
+const EventDecor4 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439935/decor2_jl0hsq.jpg";
+const EventDecor5 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439937/EventDecor5_zx8hdu.jpg";
+const EventDecor6 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439937/EventDecor6_deh3yl.jpg";
+const EventDecor7 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439940/EventDecor7_sqd2ng.jpg";
+const EventDecor8 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439963/EventDecor8_ctx5gb.jpg";
+const EventDecor9 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439964/EventDecor9_mb9yzu.jpg";
+const EventDecor10 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440041/EventDecor10_qwygao.jpg";
+const EventDecor11 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440080/EventDecor11_hob5kv.jpg";
+const EventDecor12 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439970/EventDecor12_uzfpd9.jpg";
+const EventDecor13 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440023/EventDecor13_yv9ejn.jpg";
+const EventDecor14 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440144/EventDecor14_svkexz.jpg";
+const EventDecor15 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440141/EventDecor15_yjvfce.jpg";
+const EventDecor16 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439942/EventDecor16_c0lmoc.jpg";
 
 //Birthday Cake
-import BirthdayDecoration1 from "../../../../../assets/Images/GalleryImages/Decorations/BirthdayCake1.jpg";
-import BirthdayDecoration2 from "../../../../../assets/Images/GalleryImages/Decorations/BirthdayCake2.jpg";
-import BirthdayDecoration3 from "../../../../../assets/Images/GalleryImages/Decorations/BirthdayCake3.jpg";
-import BirthdayDecoration4 from "../../../../../assets/Images/GalleryImages/Decorations/BirthdayCake4.jpg";
-import BirthdayDecoration5 from "../../../../../assets/Images/GalleryImages/Decorations/BirthdayCake5.jpg";
-import BirthdayDecoration6 from "../../../../../assets/Images/GalleryImages/Decorations/BirthdayCake6.jpg";
-import BirthdayDecoration7 from "../../../../../assets/Images/GalleryImages/Decorations/BirthdayCake7.jpg";
-import BirthdayDecoration8 from "../../../../../assets/Images/GalleryImages/Decorations/BirthdayDecoration8.jpg";
-import { useLocation } from "react-router-dom";
+const BirthdayDecoration1 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439944/BirthdayCake1_xrvjvb.jpg";
+const BirthdayDecoration2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439947/BirthdayCake2_k4mbz8.jpg";
+const BirthdayDecoration3 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439947/BirthdayCake3_icgddr.jpg";
+const BirthdayDecoration4 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439958/BirthdayCake4_qzqj1k.jpg";
+const BirthdayDecoration5 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440111/BirthdayCake5_wciazv.jpg";
+const BirthdayDecoration6 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440025/BirthdayCake6_zljdp6.jpg";
+const BirthdayDecoration7 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440056/BirthdayCake7_yaakic.jpg";
+const BirthdayDecoration8 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439935/BirthdayDecoration8_rp3tte.jpg";
 
 export default function Decorations() {
   const location = useLocation();
@@ -163,82 +205,82 @@ export default function Decorations() {
     {
       id: 1,
       image: EventDecor1,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 2,
       image: EventDecor2,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 3,
       image: EventDecor3,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 4,
       image: EventDecor4,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 5,
       image: EventDecor5,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 6,
       image: EventDecor6,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 7,
       image: EventDecor7,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 8,
       image: EventDecor8,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 9,
       image: EventDecor9,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 10,
       image: EventDecor10,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 11,
       image: EventDecor11,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 12,
       image: EventDecor12,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 13,
       image: EventDecor13,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 14,
       image: EventDecor14,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 15,
       image: EventDecor15,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
     {
       id: 16,
       image: EventDecor16,
-      alt: "Event Decoration",
+      alt: "Event Decorations",
     },
   ];
   //Birthday Decoration
@@ -246,42 +288,42 @@ export default function Decorations() {
     {
       id: 1,
       image: BirthdayDecoration1,
-      alt: "Birthday Decoration",
+      alt: "Birthday Decorations",
     },
     {
       id: 2,
       image: BirthdayDecoration2,
-      alt: "Birthday Decoration",
+      alt: "Birthday Decorations",
     },
     {
       id: 3,
       image: BirthdayDecoration3,
-      alt: "Birthday Decoration",
+      alt: "Birthday Decorations",
     },
     {
       id: 4,
       image: BirthdayDecoration4,
-      alt: "Birthday Decoration",
+      alt: "Birthday Decorations",
     },
     {
       id: 5,
       image: BirthdayDecoration5,
-      alt: "Birthday Decoration",
+      alt: "Birthday Decorations",
     },
     {
       id: 6,
       image: BirthdayDecoration6,
-      alt: "Birthday Decoration",
+      alt: "Birthday Decorations",
     },
     {
       id: 7,
       image: BirthdayDecoration7,
-      alt: "Birthday Decoration",
+      alt: "Birthday Decorations",
     },
     {
       id: 8,
       image: BirthdayDecoration8,
-      alt: "Birthday Decoration",
+      alt: "Birthday Decorations",
     },
   ];
 
@@ -298,6 +340,7 @@ export default function Decorations() {
                   src={image.image}
                   alt={image.alt}
                   className={styles.galleryImages}
+                  loading="lazy"
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 50 }}
                   transition={{ duration: 0.5 }}
@@ -320,6 +363,7 @@ export default function Decorations() {
                   src={image.image}
                   alt={image.alt}
                   className={styles.galleryImages}
+                  loading="lazy"
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 50 }}
                   transition={{ duration: 0.5 }}
@@ -344,6 +388,7 @@ export default function Decorations() {
                   alt={image.alt}
                   className={styles.galleryImages}
                   whileInView={{ opacity: 1, y: 0 }}
+                  loading="lazy"
                   initial={{ opacity: 0, y: 50 }}
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}

@@ -107,11 +107,11 @@ export default function Footer() {
             <h4>Get In Touch</h4>
             <ul className={styles.contact}>
               <li>
-                <FaEnvelope /> arubola.yemi@gmail.com
+                <FaEnvelope /> arubuola.yemi@gmail.com
               </li>
               <li>
                 <BiPhone style={{ fontSize: "20px", color: "#fff" }} />{" "}
-                +2348029915193, +2348034370838
+                +2348034370838, +2348029915193
               </li>
               <li>
                 <FaMapMarkerAlt /> Igwe Bustop, Atan-ota, Ogun State.

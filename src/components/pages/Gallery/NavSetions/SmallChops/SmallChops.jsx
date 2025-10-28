@@ -2,18 +2,30 @@ import styles from "./smallChops.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-import smallChopImage from "../../../../../assets/Images/GalleryImages/SmallChops/smallChops.png";
-import MilkyDonut from "../../../../../assets/Images/GalleryImages/SmallChops/MilkyDonut.jpg";
-import pastries4 from "../../../../../assets/Images/GalleryImages/SmallChops/pastries4.jpg";
-import smallChops1 from "../../../../../assets/Images/GalleryImages/SmallChops/smallChops1.jpg";
-import smallChops2 from "../../../../../assets/Images/GalleryImages/SmallChops/smallChops2.jpg";
-import pastries1 from "../../../../../assets/Images/GalleryImages/SmallChops/pastries1.jpg";
-import chinchin from "../../../../../assets/Images/GalleryImages/SmallChops/chinchin.jpg";
-import meatPie from "../../../../../assets/Images/GalleryImages/SmallChops/meatPie.jpg";
-import pastries2 from "../../../../../assets/Images/GalleryImages/SmallChops/pastries2.jpg";
-import pastries3 from "../../../../../assets/Images/GalleryImages/SmallChops/pastries3.jpg";
-import pastries5 from "../../../../../assets/Images/GalleryImages/SmallChops/pastries5.jpg";
-import meatPie2 from "../../../../../assets/Images/GalleryImages/SmallChops/meatPie2.jpg";
+const smallChopImage =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440184/smallChops_m3yfzb.png";
+const MilkyDonut =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440167/MilkyDonut_bmoaxk.jpg";
+const pastries4 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440162/pastries4_i2lkci.jpg";
+const smallChops1 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440163/smallChops1_tek752.jpg";
+const smallChops2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440163/smallChops2_hidiuy.jpg";
+const pastries1 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440168/pastries1_gkcfrl.jpg";
+const chinchin =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440164/chinchin_pcia8d.jpg";
+const meatPie =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440185/meatPie_c8fzau.jpg";
+const pastries2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440191/pastries2_e82sfa.jpg";
+const pastries3 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440177/pastries3_x4g7bz.jpg";
+const pastries5 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440162/pastries5_iltswk.jpg";
+const meatPie2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440180/meatPie2_jhukz9.jpg";
 
 export default function SmallChops() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -22,62 +34,62 @@ export default function SmallChops() {
     {
       id: 1,
       image: smallChopImage,
-      alt: "All sweet treats",
+      alt: "Small Chops",
     },
     {
       id: 2,
       image: MilkyDonut,
-      alt: "All sweet treats",
+      alt: "Milky Donut",
     },
     {
       id: 3,
       image: pastries4,
-      alt: "All sweet treats",
+      alt: "Shawama",
     },
     {
       id: 4,
       image: smallChops1,
-      alt: "All sweet treats",
+      alt: "Small Chops",
     },
     {
       id: 5,
       image: smallChops2,
-      alt: "All sweet treats",
+      alt: "Small Chops",
     },
     {
       id: 6,
       image: pastries1,
-      alt: "All sweet treats",
+      alt: "Donuts",
     },
     {
       id: 7,
       image: chinchin,
-      alt: "All sweet treats",
+      alt: "Chin Chin",
     },
     {
       id: 8,
       image: meatPie,
-      alt: "All sweet treats",
+      alt: "Meat Pie and Sausage Rolls",
     },
     {
       id: 9,
       image: pastries2,
-      alt: "All sweet treats",
+      alt: "Hamburger",
     },
     {
       id: 10,
       image: pastries3,
-      alt: "All sweet treats",
+      alt: "Egg Roll",
     },
     {
       id: 11,
       image: pastries5,
-      alt: "All sweet treats",
+      alt: "Shawama",
     },
     {
       id: 12,
       image: meatPie2,
-      alt: "All sweet treats",
+      alt: "Meat Pie",
     },
   ];
 
@@ -93,6 +105,7 @@ export default function SmallChops() {
                   src={image.image}
                   alt={image.alt}
                   className={styles.galleryImages}
+                  loading="lazy"
                   whileInView={{ opacity: 1, y: 0 }}
                   initial={{ opacity: 0, y: 50 }}
                   transition={{ duration: 0.5 }}

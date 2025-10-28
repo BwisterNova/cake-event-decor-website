@@ -24,7 +24,7 @@ export default function Galleries() {
           <h1 className={styles.heroHeading}>Galleries</h1>
         </div>
       </section>
-      {/*Tabs for the Galleries */}
+      {/*Tab for the Galleries */}
       <section>
         <Gallery />
       </section>

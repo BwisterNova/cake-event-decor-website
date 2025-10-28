@@ -3,7 +3,7 @@
 
 /*hero section */
 .heroSection {
-  background: url(../../../assets/Images/GalleryImages/Cakes/chocoCake.png)
+  background: url("https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439557/chocoCake_z1rput.png")
     center/cover no-repeat;
   color: white;
   text-align: center;
