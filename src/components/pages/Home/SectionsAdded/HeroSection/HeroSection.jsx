@@ -7,9 +7,12 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 
 //For Images
-import slide1 from "../../../../../assets/Images/HomeImages/StageDecor.png";
-import slide2 from "../../../../../assets/Images/HomeImages/chocoCake.png";
-import slide3 from "../../../../../assets/Images/HomeImages/BirthdayEvent.png";
+const slide1 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703802/StageDecor_dqo0fq.png";
+const slide2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703708/chocoCake_wyvjc8.png";
+const slide3 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703707/BirthdayEvent_mptiib.png";
 
 export default function HeroSection() {
   const slides = [

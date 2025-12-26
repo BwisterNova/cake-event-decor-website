@@ -2,14 +2,22 @@ import styles from "./galleryShowCase.module.css";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import showCase1 from "../../../../../assets/Images/ServicesImage/showCase1.jpg";
-import showCase2 from "../../../../../assets/Images/ServicesImage/showCase2.jpg";
-import showCase3 from "../../../../../assets/Images/ServicesImage/showCase3.jpg";
-import showCase4 from "../../../../../assets/Images/ServicesImage/showCase4.jpg";
-import milkyDonut from "../../../../../assets/Images/ServicesImage/MilkyDonut.jpg";
-import showCase6 from "../../../../../assets/Images/ServicesImage/showCase6.jpg";
-import yellowDecoration from "../../../../../assets/Images/ServicesImage/yellowBlueDecor.jpg";
-import smallChops from "../../../../../assets/Images/ServicesImage/smallChops.png";
+const showCase1 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704181/showCase1_cpo0ob.jpg";
+const showCase2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704207/showCase2_zevgsx.jpg";
+const showCase3 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704218/showCase3_bx6t4s.jpg";
+const showCase4 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704182/showCase4_q7wp2o.jpg";
+const milkyDonut =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704180/MilkyDonut_wnukoy.jpg";
+const showCase6 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704192/showCase6_nxodza.jpg";
+const yellowDecoration =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704163/yellowBlueDecor_ius5ws.jpg";
+const smallChops =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704213/smallChops_mcbxvt.png";
 
 const galleryImages = [
   {

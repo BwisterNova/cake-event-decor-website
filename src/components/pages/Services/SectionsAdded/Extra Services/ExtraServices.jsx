@@ -1,9 +1,12 @@
 import styles from "./extraServices.module.css";
 import { motion } from "framer-motion"; // Import motion
 
-import smallChops from "../../../../../assets/Images/ServicesImage/smallChops.png";
-import cakePatries from "../../../../../assets/Images/ServicesImage/cakePatries.jpg";
-import StudentWorking from "../../../../../assets/Images/ServicesImage/studentTraining.png";
+const smallChops =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704213/smallChops_mcbxvt.png";
+const cakePatries =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704165/cakePatries_e1adwx.jpg";
+const StudentWorking =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704293/studentTraining_veexav.png";
 
 export default function ExtraServices() {
   const extraServices = [

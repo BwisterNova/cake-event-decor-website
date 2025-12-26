@@ -2,11 +2,16 @@ import styles from "./testimonialsSection.module.css";
 import { useState, useEffect } from "react";
 
 //Client Images
-import profile1 from "../../../../../assets/Images/HomeImages/woman1.jpg";
-import profile2 from "../../../../../assets/Images/HomeImages/man1.jpg";
-import profile3 from "../../../../../assets/Images/HomeImages/woman2.jpg";
-import profile4 from "../../../../../assets/Images/HomeImages/man2.jpg";
-import profile5 from "../../../../../assets/Images/HomeImages/woman3.jpg";
+const profile1 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703683/woman1_enmhlb.jpg";
+const profile2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703570/man1_mpiq2z.jpg";
+const profile3 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703683/woman2_zirxr2.jpg";
+const profile4 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703696/man2_wfg6qw.jpg";
+const profile5 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703689/woman3_qeq9wa.jpg";
 
 const reviews = [
   {

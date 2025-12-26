@@ -7,11 +7,16 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import styles from "./testimonialSection.module.css";
 
-import profile1 from "../../../../../assets/Images/AboutImages/woman1.jpg";
-import profile2 from "../../../../../assets/Images/HomeImages/man1.jpg";
-import profile3 from "../../../../../assets/Images/HomeImages/woman2.jpg";
-import profile4 from "../../../../../assets/Images/HomeImages/man2.jpg";
-import profile5 from "../../../../../assets/Images/HomeImages/woman3.jpg";
+const profile1 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704335/woman1_g4282p.jpg";
+const profile2 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704328/man1_qr2vyw.jpg";
+const profile3 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704333/woman2_r35h50.jpg";
+const profile4 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704333/man2_o2iy1j.jpg";
+const profile5 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704338/woman3_vzadks.jpg";
 
 // Import required modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";

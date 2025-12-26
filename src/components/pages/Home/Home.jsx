@@ -4,9 +4,11 @@ import React, { useRef, useEffect, useState } from "react";
 
 import HeroSection from "./SectionsAdded/HeroSection/HeroSection";
 
-import chocolateCake from "../../../assets/Images/HomeImages/chocolateCake.png";
-import EventDecor from "../../../assets/Images/HomeImages/EventDecor.png";
-import decor from "../../../assets/Images/HomeImages/decor.jpg";
+const chocolateCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703739/chocolateCake_dz1hg4.png";
+const EventDecor =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703734/EventDecor_avptgw.png";
+const decor = "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703739/decor_xl6xba.jpg";
 import GallerySection from "./SectionsAdded/GallerySection/GallerySection";
 import TestimonialsSection from "./SectionsAdded/TestimonialsSection/TestimonialsSection";
 

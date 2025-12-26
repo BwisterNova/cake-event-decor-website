@@ -1,11 +1,19 @@
 import styles from "./about.module.css";
-import decor from "../../../assets/Images/AboutImages/decor.png";
-import wedSpace from "../../../assets/Images/AboutImages/wedSpace.png";
-import happyFounder from "../../../assets/Images/AboutImages/happyFounder.jpg";
-import founder from "../../../assets/Images/AboutImages/founder.jpg";
-import candleCakeIcon from "../../../assets/Images/AboutImages/candleCakeIcon.png";
-import CalenderIcon from "../../../assets/Images/AboutImages/Calender.png";
-import purpleIcon from "../../../assets/Images/AboutImages/purpleIcon.png";
+const decor =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704368/Decor_uzuohs.png";
+const wedSpace =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704377/wedSpace_bhwp9f.png";
+const happyFounder =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704370/happyFounder_mefjt7.jpg";
+const founder =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704335/founder_mh7kex.jpg";
+const candleCakeIcon =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704346/candleCakeIcon_pszo1c.png";
+const CalenderIcon =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704348/Calender_gpyv1d.png";
+const purpleIcon =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704335/purpleIcon_ck37cl.png";
+
 import TestimonialSection from "./SectionaAdded/Testimonial/TestimonialSection";
 
 import { useLocation } from "react-router-dom";

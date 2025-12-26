@@ -1,7 +1,12 @@
 import styles from "./contact.module.css";
 import { motion } from "framer-motion";
 import LocationSection from "./SectionAdded/LocationSection";
-import { BiCurrentLocation, BiEnvelope, BiPhone } from "react-icons/bi";
+import {
+  BiCurrentLocation,
+  BiEnvelope,
+  BiLogoWhatsapp,
+  BiPhone,
+} from "react-icons/bi";
 import { useState } from "react";
 
 export default function Contact() {
@@ -61,11 +66,11 @@ export default function Contact() {
               </p>
               <ul className={styles.contactList}>
                 <li>
-                  <BiPhone /> +2348034370838
+                  <BiPhone /> +2348034370838,+2348029915193
                 </li>
-                <li>
-                  <BiPhone /> +2348029915193
-                </li>
+                {/* <li>
+                  <BiLogoWhatsapp />
+                </li> */}
                 <li>
                   <BiEnvelope /> arubuola.yemi@gmail.com
                 </li>

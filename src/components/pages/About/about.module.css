@@ -8,7 +8,7 @@
 .intro {
   text-align: center;
   margin: 0 auto 2rem;
-  background: url("../../../assets/Images/AboutImages/purpleEvent.png")
+  background: url("https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704365/purpleEvent_mahzev.png")
     center/cover no-repeat;
   filter: brightness(80%);
   padding: 8rem 0;
@@ -323,7 +323,7 @@
 /*Celebrate Section */
 .celebrateSection {
   position: relative;
-  background-image: url("../../../assets/Images/AboutImages/celebrate.png");
+  background-image: url("https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704381/celebrate_t290ds.png");
   background-size: cover;
   background-position: center;
   min-height: 40vh;

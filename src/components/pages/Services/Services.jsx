@@ -3,13 +3,18 @@ import CelebrationSection from "./SectionsAdded/CelebrationSection/CelebrationSe
 import ExtraServices from "./SectionsAdded/Extra Services/ExtraServices";
 import GalleryShowCase from "./SectionsAdded/GalleryShowCase/GalleyShowCase";
 import styles from "./services.module.css";
-import cake from "../../../assets/Images/ServicesImage/cutCake.jpeg";
-import decorate from "../../../assets/Images/ServicesImage/event-Decor.png";
-import Mentorship from "../../../assets/Images/ServicesImage/Ceo&Student1.jpg";
+
+const cake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704171/cutCake_gx9fuo.jpg";
+const decorate =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704300/event-Decor_ajvlat.png";
+const Mentorship =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704165/Ceo_Student1_amvjap.jpg";
+
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-// 1. Import motion from framer-motion
+//  Import motion from framer-motion
 import { motion } from "framer-motion";
 
 const services = [

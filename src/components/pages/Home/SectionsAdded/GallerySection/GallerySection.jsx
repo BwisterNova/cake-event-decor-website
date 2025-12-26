@@ -3,14 +3,22 @@ import styles from "./gallerySection.module.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import chocolateCake from "../../../../../assets/Images/HomeImages/chocolateCake.png";
-import stageDecor from "../../../../../assets/Images/HomeImages/StageDecor.png";
-import TableDecor from "../../../../../assets/Images/HomeImages/TableDecor.jpg";
-import weddingCake from "../../../../../assets/Images/HomeImages/weddingCake.jpg";
-import pastries from "../../../../../assets/Images/HomeImages/pastries.jpg";
-import birthdayDecor from "../../../../../assets/Images/HomeImages/birthdayDecor.jpg";
-import smallChops from "../../../../../assets/Images/HomeImages/SmallChops.jpg";
-import EventDecor from "../../../../../assets/Images/HomeImages/EventDecor8.jpg";
+const chocolateCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439451/Bcake_uo2nhz.jpg";
+const stageDecor =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440141/EventDecor15_yjvfce.jpg";
+const TableDecor =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703680/TableDecor_foq23t.jpg";
+const weddingCake =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703679/weddingCake_mvph32.jpg";
+const pastries =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703575/pastries_kfltzd.jpg";
+const birthdayDecor =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703604/birthdayDecor_nthfe0.jpg";
+const smallChops =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703591/SmallChops_vq80e0.jpg";
+const EventDecor =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703684/EventDecor8_tlszej.jpg";
 
 export default function GallerySection() {
   //All this contain all the Imeges below the Tab menu. Plus they navigate to othe page when clicked on the see more
