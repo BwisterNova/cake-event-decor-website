@@ -1,6 +1,10 @@
 import styles from "./smallChops.module.css";
-import { motion, AnimatePresence } from "framer-motion";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+
+//Small chops and pastries images
 
 const smallChopImage =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440184/smallChops_m3yfzb.png";

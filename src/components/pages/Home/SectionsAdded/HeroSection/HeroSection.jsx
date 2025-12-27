@@ -2,6 +2,7 @@ import styles from "./heroSection.module.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/effect-fade";

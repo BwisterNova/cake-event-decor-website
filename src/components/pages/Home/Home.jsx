@@ -1,6 +1,7 @@
 import styles from "./home.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import React, { useRef, useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 import HeroSection from "./SectionsAdded/HeroSection/HeroSection";
 
@@ -8,7 +9,8 @@ const chocolateCake =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703739/chocolateCake_dz1hg4.png";
 const EventDecor =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703734/EventDecor_avptgw.png";
-const decor = "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703739/decor_xl6xba.jpg";
+const decor =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703739/decor_xl6xba.jpg";
 import GallerySection from "./SectionsAdded/GallerySection/GallerySection";
 import TestimonialsSection from "./SectionsAdded/TestimonialsSection/TestimonialsSection";
 
@@ -87,6 +89,30 @@ export default function Home() {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          DE-Favour Cakes & Events - Premium Cakes and Event Decorations
+        </title>
+        <meta
+          name="description"
+          content="Discover exquisite cakes, event decorations, and catering services by DE-Favour. Perfect for birthdays, weddings, and celebrations in Nigeria."
+        />
+        <meta
+          name="keywords"
+          content="cakes, event decorations, catering, birthday cakes, wedding cakes, small chops, Nigeria"
+        />
+        <meta property="og:title" content="DE-Favour Cakes & Events" />
+        <meta
+          property="og:description"
+          content="Premium cakes and event decorations for your special occasions."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703739/chocolateCake_dz1hg4.png"
+        />
+        <meta property="og:url" content="https://yourdomain.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <main className={styles.main}>
         {/* Hero Section */}
         <section>

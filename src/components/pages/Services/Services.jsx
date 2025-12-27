@@ -3,6 +3,7 @@ import CelebrationSection from "./SectionsAdded/CelebrationSection/CelebrationSe
 import ExtraServices from "./SectionsAdded/Extra Services/ExtraServices";
 import GalleryShowCase from "./SectionsAdded/GalleryShowCase/GalleyShowCase";
 import styles from "./services.module.css";
+import { Helmet } from "react-helmet";
 
 const cake =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704171/cutCake_gx9fuo.jpg";
@@ -15,6 +16,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 //  Import motion from framer-motion
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const services = [
@@ -56,6 +58,13 @@ export default function Services() {
 
   return (
     <div>
+      <Helmet>
+        <title>Our Services - DE-Favour Cakes & Events</title>
+        <meta
+          name="description"
+          content="Explore our services including custom cakes, event decorations, catering, and more for your special events."
+        />
+      </Helmet>
       <main>
         {/*Hero Section */}
         <section className={styles.hero}>

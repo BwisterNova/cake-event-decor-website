@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from "./cakeGallery.module.css";
 import { useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 //Birthday Cakes
 const flowerCake =
@@ -97,7 +99,7 @@ const wedCake13 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439488/wedCake13_hrpgbv.jpg";
 const wedCake14 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439532/wedCake14_pbcrg1.jpg";
- 
+
 //Graduation Cake
 const graduationCake1 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439484/graduationCake1_zvtayy.jpg";

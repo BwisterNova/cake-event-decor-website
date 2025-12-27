@@ -1,4 +1,5 @@
 import styles from "./contact.module.css";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import LocationSection from "./SectionAdded/LocationSection";
 import {
@@ -8,6 +9,7 @@ import {
   BiPhone,
 } from "react-icons/bi";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Contact() {
   //For reciving mails
@@ -35,13 +37,20 @@ export default function Contact() {
       } else {
         setStatus("error");
       }
-    } catch (err) {
+    } catch {
       setStatus("error");
     }
   }
 
   return (
     <div>
+      <Helmet>
+        <title>Contact Us - DE-Favour Cakes & Events</title>
+        <meta
+          name="description"
+          content="Get in touch with DE-Favour for inquiries about cakes, event decorations, and services. Contact us today!"
+        />
+      </Helmet>
       <main className={styles.main}>
         <motion.div
           className={styles.container}

@@ -1,8 +1,9 @@
 import styles from "./decorations.module.css";
-import { motion, AnimatePresence } from "framer-motion";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-
+import { AnimatePresence } from "framer-motion";
 //Wedding Decorations Images
 const wedDecor =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439953/wedDecor_e6yacq.jpg";

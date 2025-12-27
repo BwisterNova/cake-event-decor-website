@@ -48,7 +48,7 @@ function App() {
           <Route path="/gallery" element={<Galleries />}>
             <Route index element={<Navigate to="/cakes" />} />
           </Route>
-          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
 
           {/*Gallary nav links */}
           <Route path="/cakes" element={<CakeGallery />} />

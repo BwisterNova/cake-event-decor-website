@@ -1,4 +1,5 @@
 import styles from "./about.module.css";
+import { Helmet } from "react-helmet";
 const decor =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704368/Decor_uzuohs.png";
 const wedSpace =
@@ -66,6 +67,13 @@ export default function About() {
 
   return (
     <div>
+      <Helmet>
+        <title>About Us - DE-Favour Cakes & Events</title>
+        <meta
+          name="description"
+          content="Learn about DE-Favour Cakes & Events, our story, mission, and commitment to quality cakes and event decorations."
+        />
+      </Helmet>
       <main className={styles.main}>
         {/* About Background */}
         <section className={styles.intro}>

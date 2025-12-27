@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import styles from "./galleries.module.css";
 import Gallery from "./GalleryTab/Gallery";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Galleries() {
   const location = useLocation();
@@ -17,6 +18,13 @@ export default function Galleries() {
 
   return (
     <div>
+      <Helmet>
+        <title>Gallery - DE-Favour Cakes & Events</title>
+        <meta
+          name="description"
+          content="Browse our gallery of beautiful cakes, event decorations, and small chops for inspiration."
+        />
+      </Helmet>
       <section className={styles.heroSection} id="gallery-tabs">
         <div className={styles.heroContent}>
           <div className={styles.overlay}></div>
