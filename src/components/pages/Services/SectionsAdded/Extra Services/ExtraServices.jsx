@@ -1,6 +1,7 @@
 import styles from "./extraServices.module.css";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion"; // Import motion
+import OptimizedImage from "../../../../common/OptimizedImage";
 
 const smallChops =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704213/smallChops_mcbxvt.png";
@@ -49,10 +50,12 @@ export default function ExtraServices() {
               ease: "easeOut",
             }}
           >
-            <img
+            <OptimizedImage
               src={service.Image}
               alt={service.title}
               className={styles.img}
+              widths={[200, 300, 400]}
+              sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
             />
             <div className={styles.cardTexts}>
               <h3 className={styles.title}>{service.title}</h3>

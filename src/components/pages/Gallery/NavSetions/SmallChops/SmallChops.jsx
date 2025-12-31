@@ -3,6 +3,7 @@ import styles from "./smallChops.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import OptimizedImage from "../../../../common/OptimizedImage";
 
 //Small chops and pastries images
 
@@ -105,7 +106,7 @@ export default function SmallChops() {
           <div className={styles.grid}>
             {smallChops.map((image) => (
               <div className={styles.item} key={image.id}>
-                <motion.img
+                <OptimizedImage
                   src={image.image}
                   alt={image.alt}
                   className={styles.galleryImages}
@@ -115,6 +116,8 @@ export default function SmallChops() {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                   onClick={() => setSelectedImage(image.image)}
+                  widths={[200, 300, 400]}
+                  sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
                 />
               </div>
             ))}
@@ -142,10 +145,12 @@ export default function SmallChops() {
               >
                 ✖
               </button>
-              <img
+              <OptimizedImage
                 src={selectedImage}
                 alt="Small Chops + Pastries Images"
                 className={styles.modalImage}
+                widths={[600, 800, 1200]}
+                sizes="(max-width: 768px) 600px, (max-width: 1200px) 800px, 1200px"
               />
             </motion.div>
           </motion.div>

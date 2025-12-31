@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import styles from "./testimonialSection.module.css";
+import OptimizedImage from "../../../../common/OptimizedImage";
 
 const profile1 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704335/woman1_g4282p.jpg";
@@ -90,10 +91,12 @@ export default function Testimonials() {
         {testimonialsData.map((testimonial) => (
           <SwiperSlide key={testimonial.id}>
             <div className={styles.card}>
-              <img
+              <OptimizedImage
                 src={testimonial.image}
                 alt={`${testimonial.name}'s photo`}
                 className={styles.image}
+                widths={[100, 150, 200]}
+                sizes="(max-width: 768px) 100px, (max-width: 1200px) 150px, 200px"
               />
 
               <p className={styles.message}>"{testimonial.message}"</p>

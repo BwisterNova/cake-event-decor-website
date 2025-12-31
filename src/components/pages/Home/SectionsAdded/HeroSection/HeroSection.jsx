@@ -6,6 +6,7 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/effect-fade";
+import { getOptimizedImageUrl } from "../../../../../utils/imageUtils";
 
 //For Images
 const slide1 =
@@ -18,19 +19,19 @@ const slide3 =
 export default function HeroSection() {
   const slides = [
     {
-      image: slide1,
+      image: getOptimizedImageUrl(slide1, { width: 1920, height: 1080 }),
       heading: "Welcome to De-Favour Global Concepts & Events",
       description:
         "Creating unforgettable moments with exquite designs and delicious creations.",
     },
     {
-      image: slide2,
+      image: getOptimizedImageUrl(slide2, { width: 1920, height: 1080 }),
       heading: "Celebrate Beautifully",
       description:
         "Crafting exotic cakes and stunning event decoration that leave a lasting impression.",
     },
     {
-      image: slide3,
+      image: getOptimizedImageUrl(slide3, { width: 1920, height: 1080 }),
       heading: "Join Our Creative Journey",
       description:
         "Explore our gallery of breathtaking events and delectable cakes that reflect our passion for quality and creativity.",

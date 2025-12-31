@@ -4,6 +4,7 @@ import ExtraServices from "./SectionsAdded/Extra Services/ExtraServices";
 import GalleryShowCase from "./SectionsAdded/GalleryShowCase/GalleyShowCase";
 import styles from "./services.module.css";
 import { Helmet } from "react-helmet";
+import OptimizedImage from "../../common/OptimizedImage";
 
 const cake =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704171/cutCake_gx9fuo.jpg";
@@ -111,10 +112,12 @@ export default function Services() {
                   ease: "easeOut",
                 }}
               >
-                <img
+                <OptimizedImage
                   src={service.Image}
                   alt={service.title}
                   className={styles.img}
+                  widths={[300, 500, 700]}
+                  sizes="(max-width: 768px) 300px, (max-width: 1200px) 500px, 700px"
                 />
                 <div className={styles.cardTexts}>
                   <h3 className={styles.titleExtra}>{service.title}</h3>

@@ -2,6 +2,7 @@ import GalleryContent from "./GalleryContents/GalleryContent";
 import styles from "./gallerySection.module.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import OptimizedImage from "../../../../common/OptimizedImage";
 
 const chocolateCake =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439451/Bcake_uo2nhz.jpg";
@@ -112,7 +113,12 @@ export default function GallerySection() {
       <div className={styles.galleryGrid}>
         {filteredItems.map((item) => (
           <div key={item.id} className={styles.galleryItem}>
-            <img src={item.img} alt={item.title} />
+            <OptimizedImage
+              src={item.img}
+              alt={item.title}
+              widths={[300, 500, 700]}
+              sizes="(max-width: 768px) 300px, (max-width: 1200px) 500px, 700px"
+            />
             <p>{item.title}</p>
             {activeTab === "All" && (
               <div

@@ -4,6 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
 import HeroSection from "./SectionsAdded/HeroSection/HeroSection";
+import OptimizedImage from "../../common/OptimizedImage";
 
 const chocolateCake =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703739/chocolateCake_dz1hg4.png";
@@ -161,10 +162,12 @@ export default function Home() {
                 servicesVisible ? styles.cardFadeUp1 : ""
               }`}
             >
-              <img
+              <OptimizedImage
                 src={chocolateCake}
                 alt="Cake Making"
                 className={styles.serviceIcon}
+                widths={[200, 300, 400]}
+                sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
               />
               <h3 className={styles.serviceTitle}>Exotic Cake Making</h3>
               <p>
@@ -178,10 +181,12 @@ export default function Home() {
                 servicesVisible ? styles.cardFadeUp2 : ""
               }`}
             >
-              <img
+              <OptimizedImage
                 src={EventDecor}
                 alt="Event Planning"
                 className={styles.serviceIcon}
+                widths={[200, 300, 400]}
+                sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
               />
               <h3 className={styles.serviceTitle}>Event Planning</h3>
               <p>
@@ -195,10 +200,12 @@ export default function Home() {
                 servicesVisible ? styles.cardFadeUp3 : ""
               }`}
             >
-              <img
+              <OptimizedImage
                 src={decor}
                 alt="Decorations"
                 className={styles.serviceIcon}
+                widths={[200, 300, 400]}
+                sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
               />
               <h3 className={styles.serviceTitle}>Decorations</h3>
               <p>
@@ -257,7 +264,7 @@ export default function Home() {
             decorations let make your special day truly unforgettable.
           </p>
 
-          <a href="/contact-us">
+          <a href="/contact">
             <button>Get a Free Quote</button>
           </a>
         </section>

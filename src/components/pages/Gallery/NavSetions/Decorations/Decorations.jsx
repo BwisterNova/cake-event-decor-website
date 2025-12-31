@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import OptimizedImage from "../../../../common/OptimizedImage";
 //Wedding Decorations Images
 const wedDecor =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439953/wedDecor_e6yacq.jpg";
@@ -337,7 +338,7 @@ export default function Decorations() {
           <div className={styles.grid}>
             {WeddingDecorations.map((image) => (
               <div className={styles.item} key={image.id}>
-                <motion.img
+                <OptimizedImage
                   src={image.image}
                   alt={image.alt}
                   className={styles.galleryImages}
@@ -347,6 +348,8 @@ export default function Decorations() {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                   onClick={() => setSelectedImage(image.image)}
+                  widths={[200, 300, 400]}
+                  sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
                 />
               </div>
             ))}
@@ -360,7 +363,7 @@ export default function Decorations() {
           <div className={styles.grid}>
             {EventDecorations.map((image) => (
               <div className={styles.item} key={image.id}>
-                <motion.img
+                <OptimizedImage
                   src={image.image}
                   alt={image.alt}
                   className={styles.galleryImages}
@@ -370,6 +373,8 @@ export default function Decorations() {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                   onClick={() => setSelectedImage(image.image)}
+                  widths={[200, 300, 400]}
+                  sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
                 />
               </div>
             ))}
@@ -384,7 +389,7 @@ export default function Decorations() {
           <div className={styles.grid}>
             {BirthdayDecoration.map((image) => (
               <div className={styles.item} key={image.id}>
-                <motion.img
+                <OptimizedImage
                   src={image.image}
                   alt={image.alt}
                   className={styles.galleryImages}
@@ -394,6 +399,8 @@ export default function Decorations() {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                   onClick={() => setSelectedImage(image.image)}
+                  widths={[200, 300, 400]}
+                  sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
                 />
               </div>
             ))}
@@ -421,10 +428,12 @@ export default function Decorations() {
               >
                 ✖
               </button>
-              <img
+              <OptimizedImage
                 src={selectedImage}
                 alt="Cake full view"
                 className={styles.modalImage}
+                widths={[600, 800, 1200]}
+                sizes="(max-width: 768px) 600px, (max-width: 1200px) 800px, 1200px"
               />
             </motion.div>
           </motion.div>

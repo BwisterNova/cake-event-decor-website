@@ -2,6 +2,7 @@ import styles from "./navBar.module.css";
 import { NavLink } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import OptimizedImage from "../common/OptimizedImage";
 import logo from "../../assets/logoImage/Logo.png";
 
 export default function NavBar() {
@@ -21,7 +22,13 @@ export default function NavBar() {
         <a href="/">
           {" "}
           <div className={styles.logoContainer}>
-            <img src={logo} alt="Logo" className={styles.logo} />
+            <OptimizedImage
+              src={logo}
+              alt="Logo"
+              className={styles.logo}
+              widths={[100, 150, 200]}
+              sizes="(max-width: 768px) 100px, (max-width: 1200px) 150px, 200px"
+            />
           </div>
         </a>
         <nav>
@@ -49,7 +56,7 @@ export default function NavBar() {
             </li>
 
             <li className={activePath === "/contact-us" ? styles.active : ""}>
-              <a href="/contact-us">Contact </a>
+              <a href="/contact">Contact </a>
             </li>
           </ul>
         </nav>

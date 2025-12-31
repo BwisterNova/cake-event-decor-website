@@ -2,6 +2,7 @@ import styles from "./galleryShowCase.module.css";
 import { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
+import OptimizedImage from "../../../../common/OptimizedImage";
 
 const showCase1 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704181/showCase1_cpo0ob.jpg";
@@ -81,17 +82,22 @@ export default function GalleryShowCase() {
         <div className={styles.grid}>
           {galleryImages.map((image) => (
             <div key={image.id} className={styles.imageWrapper}>
-              <motion.img
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
+              <motion.div
                 className={styles.image}
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 50 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
                 onClick={() => setSelectedImage(image.src)}
-              />
+              >
+                <OptimizedImage
+                  src={image.src}
+                  alt={image.alt}
+                  widths={[200, 300, 400]}
+                  sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
+                  className={styles.image}
+                />
+              </motion.div>
             </div>
           ))}
         </div>
@@ -120,10 +126,12 @@ export default function GalleryShowCase() {
               >
                 ✖
               </button>
-              <img
+              <OptimizedImage
                 src={selectedImage}
                 alt="Cake full view"
                 className={styles.modalImage}
+                widths={[600, 800, 1200]}
+                sizes="(max-width: 768px) 600px, (max-width: 1200px) 800px, 1200px"
               />
             </motion.div>
           </motion.div>

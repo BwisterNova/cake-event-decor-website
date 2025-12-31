@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
+import OptimizedImage from "../../../../common/OptimizedImage";
 
 //Birthday Cakes
 const flowerCake =
@@ -447,7 +448,7 @@ export default function CakeGallery() {
           <div className={styles.grid}>
             {BirthdayCakes.map((image) => (
               <div className={styles.item} key={image.id}>
-                <motion.img
+                <OptimizedImage
                   src={image.image}
                   alt={image.alt}
                   loading="lazy"
@@ -457,6 +458,8 @@ export default function CakeGallery() {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                   onClick={() => setSelectedImage(image.image)}
+                  widths={[200, 300, 400]}
+                  sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
                 />
               </div>
             ))}
@@ -471,7 +474,7 @@ export default function CakeGallery() {
           <div className={styles.grid}>
             {WeddingCakes.map((image) => (
               <div className={styles.item} key={image.id}>
-                <motion.img
+                <OptimizedImage
                   src={image.image}
                   alt={image.alt}
                   loading="lazy"
@@ -481,6 +484,8 @@ export default function CakeGallery() {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                   onClick={() => setSelectedImage(image.image)}
+                  widths={[200, 300, 400]}
+                  sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
                 />
               </div>
             ))}
@@ -495,7 +500,7 @@ export default function CakeGallery() {
           <div className={styles.grid}>
             {graduationCakes.map((image) => (
               <div className={styles.item} key={image.id}>
-                <motion.img
+                <OptimizedImage
                   src={image.image}
                   alt={image.alt}
                   loading="lazy"
@@ -505,6 +510,8 @@ export default function CakeGallery() {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                   onClick={() => setSelectedImage(image.image)}
+                  widths={[200, 300, 400]}
+                  sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
                 />
               </div>
             ))}
@@ -519,7 +526,7 @@ export default function CakeGallery() {
           <div className={styles.grid}>
             {cupCakes.map((image) => (
               <div className={styles.item} key={image.id}>
-                <motion.img
+                <OptimizedImage
                   src={image.image}
                   alt={image.alt}
                   loading="lazy"
@@ -529,6 +536,8 @@ export default function CakeGallery() {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                   onClick={() => setSelectedImage(image.image)}
+                  widths={[200, 300, 400]}
+                  sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
                 />
               </div>
             ))}
@@ -556,10 +565,12 @@ export default function CakeGallery() {
               >
                 ✖
               </button>
-              <img
+              <OptimizedImage
                 src={selectedImage}
                 alt="Cake full view"
                 className={styles.modalImage}
+                widths={[600, 800, 1200]}
+                sizes="(max-width: 768px) 600px, (max-width: 1200px) 800px, 1200px"
               />
             </motion.div>
           </motion.div>

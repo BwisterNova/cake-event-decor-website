@@ -1,5 +1,6 @@
 import styles from "./about.module.css";
 import { Helmet } from "react-helmet";
+import OptimizedImage from "../../common/OptimizedImage";
 const decor =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704368/Decor_uzuohs.png";
 const wedSpace =
@@ -99,10 +100,12 @@ export default function About() {
           <div className={styles.cardSection}>
             {aboutCards.map((cards) => (
               <div className={styles.card} key={cards.id}>
-                <img
+                <OptimizedImage
                   src={cards.image}
                   alt={cards.title}
                   className={styles.image}
+                  widths={[200, 300, 400]}
+                  sizes="(max-width: 768px) 200px, (max-width: 1200px) 300px, 400px"
                 />
                 <div className={styles.texts}>
                   <h2 className={styles.title}>{cards.title}</h2>
@@ -126,10 +129,12 @@ export default function About() {
             </div>
 
             <div className={styles.imgSection}>
-              <img
+              <OptimizedImage
                 src={founder}
                 alt="The Founder"
                 className={styles.founderImg}
+                widths={[300, 500, 700]}
+                sizes="(max-width: 768px) 300px, (max-width: 1200px) 500px, 700px"
               />
               <div className={styles.imgText}>
                 <h2>ARUBUOLA YEMI ALICE</h2>
@@ -150,7 +155,11 @@ export default function About() {
           <h2 className={styles.title}>Why Choose Us?</h2>
           <div className={styles.cards}>
             <div className={styles.card}>
-              <img src={candleCakeIcon} alt="Cake" className={styles.icon} />
+              <OptimizedImage
+                src={candleCakeIcon}
+                alt="Cake"
+                className={styles.icon}
+              />
               <h3>Custom Cakes with a Personal Touch</h3>
               <p>
                 Each cake is uniquely designed to match your taste, theme, and
@@ -159,7 +168,11 @@ export default function About() {
             </div>
 
             <div className={styles.card}>
-              <img src={CalenderIcon} alt="Calender " className={styles.icon} />
+              <OptimizedImage
+                src={CalenderIcon}
+                alt="Calender "
+                className={styles.icon}
+              />
               <h3>Stress-Free Event Planning</h3>
               <p>
                 We handle everything from concept to execution, ensuring your
@@ -168,7 +181,7 @@ export default function About() {
             </div>
 
             <div className={styles.card}>
-              <img
+              <OptimizedImage
                 src={purpleIcon}
                 alt="Purple Heart"
                 className={styles.icon}

@@ -122,13 +122,13 @@ export default function Footer() {
 
         <div className={`${styles.bottomBar} ${styles.fadeUp}`}>
           <p>
-            © 2025 DE-Favour Global Concepts & Event.{" "}
+            © 2026 DE-Favour Global Concepts & Event.{" "}
             <span>All rights reserved.</span>
           </p>
           <div className={styles.bottomLinks}>
             <a href="/about-us">About</a>
             <a href="/services">Services</a>
-            <a href="/contact-us">Contact Us</a>
+            <a href="/contact">Contact Us</a>
           </div>
         </div>
       </footer>

@@ -1,5 +1,6 @@
 import styles from "./testimonialsSection.module.css";
 import { useState, useEffect } from "react";
+import OptimizedImage from "../../../../common/OptimizedImage";
 
 //Client Images
 const profile1 =
@@ -71,10 +72,12 @@ export default function TestimonialsSection() {
     <section className={styles.testimonialsSection}>
       <div className={styles.bgImage}></div>
       <div className={styles.reviewCard}>
-        <img
+        <OptimizedImage
           src={reviews[current].profile}
           alt={reviews[current].name}
           className={styles.profileImg}
+          widths={[100, 150, 200]}
+          sizes="(max-width: 768px) 100px, (max-width: 1200px) 150px, 200px"
         />
         <div className={styles.cardHeader}>
           <span className={styles.name}>{reviews[current].name}</span>
