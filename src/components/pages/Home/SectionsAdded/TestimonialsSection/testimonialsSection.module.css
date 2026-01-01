@@ -7,14 +7,14 @@
   margin: 1rem 0;
 }
 
-.bgImage {
+/* .bgImage {
   position: absolute;
   inset: 0;
   background: url("https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703802/StageDecor_dqo0fq.png")
     center/cover no-repeat;
   filter: brightness(0.5);
   z-index: 1;
-}
+} */
 
 .reviewCard {
   position: relative;
@@ -24,7 +24,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  padding: 2.5rem 2rem 1.5rem 2rem;
+padding: 1.5rem;
   width: 340px;
   display: flex;
   flex-direction: column;
@@ -95,5 +95,5 @@
 
 .prevBtn:hover,
 .nextBtn:hover {
-  background: #db2777;
+  background: #000;
 }

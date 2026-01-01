@@ -1,19 +1,23 @@
 import styles from "./home.module.css";
 import { Link, useNavigate } from "react-router-dom";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, Suspense } from "react";
 import { Helmet } from "react-helmet";
 
 import HeroSection from "./SectionsAdded/HeroSection/HeroSection";
 import OptimizedImage from "../../common/OptimizedImage";
 
 const chocolateCake =
-  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703739/chocolateCake_dz1hg4.png";
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767180936/IMG_20251113_173741_789_237503579_pt3rer.jpg";
 const EventDecor =
-  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703734/EventDecor_avptgw.png";
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767181249/IMG_20251011_123516_889_-243666080_xqda0a.jpg";
 const decor =
-  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703739/decor_xl6xba.jpg";
-import GallerySection from "./SectionsAdded/GallerySection/GallerySection";
-import TestimonialsSection from "./SectionsAdded/TestimonialsSection/TestimonialsSection";
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767196487/IMG_20251011_075750_684_-556779275_hlfzxq.jpg";
+const GallerySection = React.lazy(() =>
+  import("./SectionsAdded/GallerySection/GallerySection")
+);
+const TestimonialsSection = React.lazy(() =>
+  import("./SectionsAdded/TestimonialsSection/TestimonialsSection")
+);
 
 export default function Home() {
   //for the welcome section
@@ -45,7 +49,7 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  //for the services section
+  //for the services section 
   useEffect(() => {
     const observer = new window.IntersectionObserver(
       ([entry]) => {
@@ -102,7 +106,7 @@ export default function Home() {
           name="keywords"
           content="cakes, event decorations, catering, birthday cakes, wedding cakes, small chops, Nigeria"
         />
-        <meta property="og:title" content="DE-Favour Cakes & Events" />
+        <meta property="og:title" content="DE-Favour Cakes and Events" />
         <meta
           property="og:description"
           content="Premium cakes and event decorations for your special occasions."
@@ -235,7 +239,9 @@ export default function Home() {
               Click any item to see what we've created for our clients each
               piece reflects our passion for quality and creativity.
             </p>
-            <GallerySection />
+            <Suspense fallback={<div>Loading...</div>}>
+              <GallerySection />
+            </Suspense>
           </div>
         </section>
 
@@ -251,7 +257,9 @@ export default function Home() {
             Real Stories, Real Bites, Real Love. Hear from those who have Tasted
             the Difference.
           </p>
-          <TestimonialsSection />
+          <Suspense fallback={<div>Loading...</div>}>
+            <TestimonialsSection />
+          </Suspense>
         </section>
 
         {/*Contact Section */}

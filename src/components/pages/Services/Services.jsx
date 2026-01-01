@@ -7,9 +7,9 @@ import { Helmet } from "react-helmet";
 import OptimizedImage from "../../common/OptimizedImage";
 
 const cake =
-  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704171/cutCake_gx9fuo.jpg";
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767180936/IMG_20250828_142646_588_1817851438_xig6zj.jpg";
 const decorate =
-  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704300/event-Decor_ajvlat.png";
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767196463/IMG_20251011_075853_084_-216214221_gtervo.jpg";
 const Mentorship =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1766704165/Ceo_Student1_amvjap.jpg";
 

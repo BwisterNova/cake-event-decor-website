@@ -53,3 +53,9 @@
   font-size: 0.95rem;
   color: #555;
 }
+
+@media (max-width: 768px){
+  .grid{
+    margin-top: 0.6rem;
+  }
+}

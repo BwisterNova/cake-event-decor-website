@@ -19,7 +19,7 @@ export default function Benefits() {
       icon: "🧩",
       title: "All-in-One Event Solutions",
       description:
-        "One contact, zero stress – from cakes to décor to planning, we handle it all.",
+        "One contact, zero stress from cakes to decoration to planning, we handle it all.",
     },
     {
       icon: "⏱️",
@@ -37,7 +37,7 @@ export default function Benefits() {
       icon: "💸",
       title: "Affordable Packages",
       description:
-        "Luxury doesn’t have to break the bank – we offer value-driven pricing.",
+        "Luxury doesn’t have to break the bank we offer value-driven pricing.",
     },
     {
       icon: "✅",
@@ -55,7 +55,7 @@ export default function Benefits() {
       icon: "🌐",
       title: "Wider Service Reach",
       description:
-        "Serving clients across your region – we’re always closer than you think.",
+        "Serving clients across your region we’re always closer than you think.",
     },
     {
       icon: "🛠️",

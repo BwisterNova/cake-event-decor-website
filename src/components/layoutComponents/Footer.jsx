@@ -25,7 +25,7 @@ export default function Footer() {
       id: "contact",
       name: "Contact us",
 
-      link: "/contact-us",
+      link: "/contact",
     },
   ];
 

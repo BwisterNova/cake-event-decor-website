@@ -2,11 +2,11 @@
 
 .testimonials {
   padding: 2rem 1rem;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     rgba(26, 29, 43, 0.9),
     rgba(26, 29, 43, 0.9)
-  );
+  ); */
   color: #fff;
   text-align: center;
 }
@@ -20,13 +20,15 @@
 }
 
 .card {
-  background-color: #1a1d2b;
+   background: rgba(255, 255, 255, 0.18);
   color: #fff;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   border: 1px solid #ffffff;
+    backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .card:hover {
@@ -44,7 +46,7 @@
 
 .message {
   font-style: italic;
-  color: #fff;
+  color: #000;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
