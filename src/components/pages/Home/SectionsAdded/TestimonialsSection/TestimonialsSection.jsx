@@ -1,6 +1,12 @@
 import styles from "./testimonialsSection.module.css";
 import { useState, useEffect } from "react";
 import OptimizedImage from "../../../../common/OptimizedImage";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 //Client Images
 const profile1 =
@@ -55,47 +61,55 @@ const reviews = [
 ];
 
 export default function TestimonialsSection() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % reviews.length);
-    }, 6000); // 4 seconds
-    return () => clearInterval(timer);
-  }, []);
-
-  const nextReview = () => setCurrent((prev) => (prev + 1) % reviews.length);
-  const prevReview = () =>
-    setCurrent((prev) => (prev - 1 + reviews.length) % reviews.length);
-
   return (
     <section className={styles.testimonialsSection}>
-      <div className={styles.bgImage}></div>
-      <div className={styles.reviewCard}>
-        <OptimizedImage
-          src={reviews[current].profile}
-          alt={reviews[current].name}
-          className={styles.profileImg}
-          widths={[100, 150, 200]}
-          sizes="(max-width: 768px) 100px, (max-width: 1200px) 150px, 200px"
-        />
-        <div className={styles.cardHeader}>
-          <span className={styles.name}>{reviews[current].name}</span>
-          <span className={styles.stars}>
-            {Array(reviews[current].stars)
-              .fill()
-              .map((_, i) => (
-                <span key={i}>★</span>
-              ))}
-          </span>
-        </div>
-        <p className={styles.reviewText}>{reviews[current].text}</p>
-        <button className={styles.prevBtn} onClick={prevReview}>
-          &larr;
-        </button>
-        <button className={styles.nextBtn} onClick={nextReview}>
-          &rarr;
-        </button>
+      <div className={styles.container}>
+        <h2 className={styles.heading}>What Our Customers Say</h2>
+        <p className={styles.subheading}>
+          Hear from our satisfied clients about their experiences with our cakes
+          and event decorations.
+        </p>
+        <Swiper
+          modules={[Autoplay, Navigation, Pagination]}
+          spaceBetween={20}
+          slidesPerView={3}
+          loop={true}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          navigation
+          breakpoints={{
+            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 2 },
+            280: { slidesPerView: 1 },
+          }}
+        >
+          {reviews.map((review, index) => (
+            <SwiperSlide key={index}>
+              <div className={styles.card}>
+                <OptimizedImage
+                  src={review.profile}
+                  alt={review.name}
+                  className={styles.profileImg}
+                  widths={[100, 150, 200]}
+                  sizes="(max-width: 768px) 100px, (max-width: 1200px) 150px, 200px"
+                />
+                <div className={styles.cardHeader}>
+                  <span className={styles.name}>{review.name}</span>
+                  <span className={styles.stars}>
+                    {Array(review.stars)
+                      .fill()
+                      .map((_, i) => (
+                        <span key={i}>★</span>
+                      ))}
+                  </span>
+                </div>
+                <p className={styles.reviewText}>{review.text}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

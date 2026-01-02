@@ -16,6 +16,15 @@ export default function NavBar() {
     setActivePath(window.location.pathname);
   }, []);
 
+  // Close mobile menu on back button (popstate event)
+  useEffect(() => {
+    const handlePopState = () => {
+      setNav(false);
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
   return (
     <div>
       <header className={styles.navbar}>

@@ -68,7 +68,11 @@ const testimonialsData = [
 export default function Testimonials() {
   return (
     <section className={styles.testimonials}>
-      <h2 className={styles.heading}>Customer Reviews</h2>
+      <h2 className={styles.heading}>What Our Customers Say</h2>
+      <p className={styles.subheading}>
+        Hear from our satisfied clients about their experiences with our cakes
+        and event decorations.
+      </p>
 
       {/* Swiper container */}
       <Swiper

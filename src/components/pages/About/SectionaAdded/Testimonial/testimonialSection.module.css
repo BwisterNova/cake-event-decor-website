@@ -2,32 +2,38 @@
 
 .testimonials {
   padding: 2rem 1rem;
-  /* background: linear-gradient(
-    to right,
-    rgba(26, 29, 43, 0.9),
-    rgba(26, 29, 43, 0.9)
-  ); */
-  color: #fff;
+  background: #fff; /* White background */
+  color: #333;
   text-align: center;
 }
 
 .heading {
   font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #fff;
+  margin-bottom: 1rem;
+  color: #333;
   font-family: "Playfair Display", serif;
   font-weight: 600;
 }
 
+.subheading {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #666;
+  font-family: "Lato", sans-serif;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .card {
-   background: rgba(255, 255, 255, 0.18);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
   padding: 1.5rem;
   border-radius: 1rem;
-   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  border: 1px solid #ffffff;
-    backdrop-filter: blur(8px);
+  border: 1px solid #e0e0e0;
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
@@ -46,7 +52,7 @@
 
 .message {
   font-style: italic;
-  color: #000;
+  color: #555;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
@@ -63,7 +69,7 @@
 }
 
 .role {
-  color: #787373;
+  color: #777;
   font-style: italic;
   margin-bottom: 1rem;
   font-size: 0.9rem;

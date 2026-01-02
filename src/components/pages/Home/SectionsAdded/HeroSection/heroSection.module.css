@@ -89,8 +89,10 @@
   }
 
   .textWrapper {
-    transform: translateX(-50%, -50%);
-    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .heading {
@@ -124,7 +126,9 @@
 
 @media (max-width: 375px) {
   .textWrapper {
-    transform: translateX(-50%, -50%);
-    transform: translateY(0%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
