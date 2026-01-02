@@ -64,11 +64,6 @@ export default function TestimonialsSection() {
   return (
     <section className={styles.testimonialsSection}>
       <div className={styles.container}>
-        <h2 className={styles.heading}>What Our Customers Say</h2>
-        <p className={styles.subheading}>
-          Hear from our satisfied clients about their experiences with our cakes
-          and event decorations.
-        </p>
         <Swiper
           modules={[Autoplay, Navigation, Pagination]}
           spaceBetween={20}

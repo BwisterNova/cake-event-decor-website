@@ -19,10 +19,17 @@ const purpleIcon =
 import TestimonialSection from "./SectionaAdded/Testimonial/TestimonialSection";
 
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function About() {
   const location = useLocation();
+
+  // Refs for animations
+  const cardsSectionRef = useRef(null);
+  const whyChooseUsRef = useRef(null);
+  const founderSectionRef = useRef(null);
+  const celebrateSectionRef = useRef(null);
+  const getInTouchRef = useRef(null);
 
   useEffect(() => {
     if (location.hash === "#mission") {
@@ -41,6 +48,99 @@ export default function About() {
       }
     }
   }, [location]);
+
+  // Animation for cardsSection
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const cards = cardsSectionRef.current?.querySelectorAll(`.${styles.card}`);
+    cards?.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Animation for whyChooseUs
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const cards = whyChooseUsRef.current?.querySelectorAll(`.${styles.card}`);
+    cards?.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Animation for founderSection
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.fadeInUp);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (founderSectionRef.current) observer.observe(founderSectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Animation for celebrateSection
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.fadeInScale);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (celebrateSectionRef.current)
+      observer.observe(celebrateSectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Animation for getInTouch
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.slideInLeft);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (getInTouchRef.current) observer.observe(getInTouchRef.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   const aboutCards = [
     {
@@ -96,7 +196,11 @@ export default function About() {
           </div>
         </section>
         {/* cards Section */}
-        <section className={styles.cardsSection} id="mission">
+        <section
+          className={styles.cardsSection}
+          id="mission"
+          ref={cardsSectionRef}
+        >
           <div className={styles.cardSection}>
             {aboutCards.map((cards) => (
               <div className={styles.card} key={cards.id}>
@@ -117,7 +221,7 @@ export default function About() {
         </section>
 
         {/* Meet the founder Section */}
-        <section className={styles.founderSection}>
+        <section className={styles.founderSection} ref={founderSectionRef}>
           <h2 className={styles.founderTitle}>Meet the CEO</h2>
           <p className={styles.founderText}>
             Meet the visionary behind De-Favour Global Concepts & Event.
@@ -151,7 +255,11 @@ export default function About() {
         </section>
 
         {/* Why choose us Section */}
-        <section className={styles.whyChooseUs} id="why-choose-us">
+        <section
+          className={styles.whyChooseUs}
+          id="why-choose-us"
+          ref={whyChooseUsRef}
+        >
           <h2 className={styles.title}>Why Choose Us?</h2>
           <div className={styles.cards}>
             <div className={styles.card}>
@@ -197,7 +305,7 @@ export default function About() {
         </section>
 
         {/*Celebrate Section */}
-        <section className={styles.celebrateSection}>
+        <section className={styles.celebrateSection} ref={celebrateSectionRef}>
           <div className={styles.overlay}></div>
           <div className={styles.content}>
             <span className={styles.tag}>Celebrate with De-Favour</span>
@@ -218,7 +326,7 @@ export default function About() {
         </section>
 
         {/*Get In Touch Section */}
-        <section className={styles.getInTouch}>
+        <section className={styles.getInTouch} ref={getInTouchRef}>
           <div className={styles.contactOverlay}>
             <h2 className={styles.contactHeading}>
               Ready to Start Your Celebration?
@@ -228,11 +336,11 @@ export default function About() {
             </p>
 
             <div className={styles.contactButtons}>
-              <a href="/contact-us" className={styles.contactPrimaryBtn}>
+              <a href="/contact" className={styles.contactPrimaryBtn}>
                 Contact Us
               </a>
               <a
-                href="tel:+2348029915193"
+                href="tel:+2348034370838"
                 className={styles.contactSecondaryBtn}
               >
                 Call Now

@@ -25,6 +25,18 @@ export default function NavBar() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
+  // Prevent background scroll when menu is open
+  useEffect(() => {
+    if (nav) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [nav]);
+
   return (
     <div>
       <header className={styles.navbar}>

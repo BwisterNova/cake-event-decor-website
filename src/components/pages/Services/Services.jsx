@@ -80,7 +80,7 @@ export default function Services() {
               <Link to="/services" className={styles.primaryBtn}>
                 Check Out Services
               </Link>
-              <a href="/contact-us" className={styles.secondaryBtn}>
+              <a href="/contact" className={styles.secondaryBtn}>
                 Get in Touch
               </a>
             </div>
