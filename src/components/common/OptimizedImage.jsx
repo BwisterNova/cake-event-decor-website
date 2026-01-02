@@ -1,10 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  getOptimizedImageUrl,
-  generateSrcSet,
-  getSizes,
-} from "../../utils/imageUtils";
+import { getOptimizedImageUrl, generateSrcSet } from "../../utils/imageUtils";
 
 const OptimizedImage = React.forwardRef(
   (
@@ -12,8 +8,6 @@ const OptimizedImage = React.forwardRef(
       src,
       alt,
       className,
-      width,
-      height,
       sizes = "(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px",
       widths = [400, 800, 1200],
       loading = "lazy",

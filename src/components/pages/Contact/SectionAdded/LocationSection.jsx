@@ -15,7 +15,7 @@ export default function LocationSection() {
           <div className={styles.map}>
             <iframe
               title="Our Location"
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3962.85819545006!2d3.099160022308955!3d6.664489313362343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMzknNTEuMyJOIDPCsDA1JzU3LjEiRQ!5e0!3m2!1sen!2sng!4v1753460797954!5m2!1sen!2sng"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839.7858800334783!2d3.099322757065964!3d6.664196929537303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9f0039ab2d27%3A0xffae0a0a19ffeab!2sDe-Favour%20Global%20Cocepts%20and%20Events!5e1!3m2!1sen!2sng!4v1767337565258!5m2!1sen!2sng"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

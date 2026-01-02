@@ -1,5 +1,4 @@
 import styles from "./testimonialsSection.module.css";
-import { useState, useEffect } from "react";
 import OptimizedImage from "../../../../common/OptimizedImage";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

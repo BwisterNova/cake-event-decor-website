@@ -49,7 +49,7 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  //for the services section 
+  //for the services section
   useEffect(() => {
     const observer = new window.IntersectionObserver(
       ([entry]) => {
@@ -113,7 +113,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703739/chocolateCake_dz1hg4.png"
+          content="https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703802/StageDecor_dqo0fq.png"
         />
         <meta property="og:url" content="https://yourdomain.com" />
         <meta name="twitter:card" content="summary_large_image" />

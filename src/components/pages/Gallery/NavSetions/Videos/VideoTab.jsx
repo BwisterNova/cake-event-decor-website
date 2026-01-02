@@ -31,6 +31,22 @@ const video14 =
   "https://res.cloudinary.com/diwmaqpd8/video/upload/v1755438938/video14_sir58g.mp4";
 const video15 =
   "https://res.cloudinary.com/diwmaqpd8/video/upload/v1755438746/video15_uuxuql.mp4";
+const video16 =
+  "https://res.cloudinary.com/diwmaqpd8/video/upload/v1767181306/VID_20251114_173915_vbzjuk.mp4";
+const video17 =
+  "https://res.cloudinary.com/diwmaqpd8/video/upload/v1767196608/94c7fdc7ee0e4db5b571ebe03405956a_1_dj3r0d.mp4";
+const video18 =
+  "https://res.cloudinary.com/diwmaqpd8/video/upload/v1767181317/6a054df9-bbb2-41e4-8b22-ce696bf28a2e-watermark_nzozyc.mp4";
+const video19 =
+  "https://res.cloudinary.com/diwmaqpd8/video/upload/v1767196721/7559b6d4f5624c2ba05547bb432d4397_x3pa2l.mp4";
+const video20 =
+  "https://res.cloudinary.com/diwmaqpd8/video/upload/v1767196721/c5c243f8-33c4-4049-b829-4aba43f9091f-watermark_fvzquk.mp4";
+const video21 =
+  "https://res.cloudinary.com/diwmaqpd8/video/upload/v1767196695/VID_20251130_090149_t8jdvw.mp4";
+const video22 =
+  "https://res.cloudinary.com/diwmaqpd8/video/upload/v1767196623/245945d5-5910-4ecf-a9b7-7f090f054899-watermark_pdt309.mp4";
+const video23 =
+  "https://res.cloudinary.com/diwmaqpd8/video/upload/v1767196681/0f5e4270d1b24cb58aeb46938ae07542_mmjbis.mp4";
 
 export default function VideoTab() {
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -125,6 +141,46 @@ export default function VideoTab() {
       src: video15,
       alt: "Videos",
       title: "Birthday Cake",
+    },
+    {
+      id: 14,
+      src: video16,
+      alt: "Videos",
+    },
+    {
+      id: 15,
+      src: video17,
+      alt: "Videos",
+    },
+    {
+      id: 16,
+      src: video18,
+      alt: "Videos",
+    },
+    {
+      id: 17,
+      src: video19,
+      alt: "Videos",
+    },
+    {
+      id: 18,
+      src: video20,
+      alt: "Videos",
+    },
+    {
+      id: 19,
+      src: video21,
+      alt: "Videos",
+    },
+    {
+      id: 20,
+      src: video22,
+      alt: "Videos",
+    },
+    {
+      id: 21,
+      src: video23,
+      alt: "Videos",
     },
   ];
 

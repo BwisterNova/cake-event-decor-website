@@ -68,6 +68,10 @@ const bCake27 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439799/bCake27_rigkl9.jpg";
 const bCake28 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439889/bCake28_owcwkj.jpg";
+const bCake29 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767180936/IMG_20250828_142646_588_1817851438_xig6zj.jpg";
+const bCake30 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767180936/IMG_20251113_173741_789_237503579_pt3rer.jpg";
 
 //Wedding Cake
 const wedCake =
@@ -100,6 +104,8 @@ const wedCake13 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439488/wedCake13_hrpgbv.jpg";
 const wedCake14 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439532/wedCake14_pbcrg1.jpg";
+const wedCake15 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767196400/7d9ee32d745faef361360bb20536d4db_1_ftsq3x.jpg";
 
 //Graduation Cake
 const graduationCake1 =
@@ -301,6 +307,16 @@ export default function CakeGallery() {
       image: bCake28,
       alt: "Birthday + Custom Cakes",
     },
+    {
+      id: 31,
+      image: bCake29,
+      alt: "Birthday + Custom Cakes",
+    },
+    {
+      id: 32,
+      image: bCake30,
+      alt: "Birthday + Custom Cakes",
+    },
   ];
 
   //Wedding + Anniversary Cakes
@@ -378,6 +394,11 @@ export default function CakeGallery() {
     {
       id: 15,
       image: wedCake14,
+      alt: "Wedding + Anniversary Cakes",
+    },
+    {
+      id: 16,
+      image: wedCake15,
       alt: "Wedding + Anniversary Cakes",
     },
   ];

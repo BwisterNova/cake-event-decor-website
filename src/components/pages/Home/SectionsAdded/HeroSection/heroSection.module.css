@@ -91,9 +91,8 @@
   .textWrapper {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 500px;
+    /* left: 50%; */
+    transform: translate(0%, -50%);
   }
 
   .heading {
@@ -109,6 +108,12 @@
   .slide {
     height: 58vh;
   }
+  .textWrapper {
+    position: absolute;
+    top: 50%;
+    /* left: 50%; */
+    transform: translate(0%, -50%);
+  }
 }
 
 @media (max-width: 480px) {
@@ -123,13 +128,44 @@
   .description {
     font-size: 0.95rem;
   }
+  .textWrapper {
+    position: absolute;
+    top: 40%;
+    /* left: 50%; */
+    transform: translate(0%, -50%);
+  }
+}
+@media (max-width: 415px) {
+  .slide {
+    height: 68vh;
+  }
+  .textWrapper {
+    position: absolute;
+    top: 40%;
+    /* left: 50%; */
+    transform: translate(0%, -50%);
+  }
 }
 
 @media (max-width: 375px) {
   .textWrapper {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* left: 50%; */
+    transform: translate(0%, -50%);
+  }
+  .slide {
+    height: 68vh;
+  }
+}
+@media (max-width: 345px) {
+  .slide {
+    height: 73vh;
+  }
+  .textWrapper {
+    position: absolute;
+    top: 40%;
+    /* left: 50%; */
+    transform: translate(0%, -50%);
   }
 }

@@ -42,6 +42,8 @@ const wedDecor17 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439956/wedDecor17_fzypa5.jpg";
 const wedDecor18 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439974/wedDecor18_cctrkt.jpg";
+const wedDecor19 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767181249/IMG_20251011_133918_522_-1295632157_egzs5l.jpg";
 
 //Events Decoration
 const EventDecor1 =
@@ -76,6 +78,16 @@ const EventDecor15 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440141/EventDecor15_yjvfce.jpg";
 const EventDecor16 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755439942/EventDecor16_c0lmoc.jpg";
+const EventDecor17 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767181236/IMG_20251011_095801_629_362386409_vlbeik.jpg";
+const EventDecor18 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767180933/IMG_20251011_073253_797_-628615208_ialfqr.jpg";
+const EventDecor19 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767181249/IMG_20251011_123516_889_-243666080_xqda0a.jpg";
+const EventDecor20 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767196474/IMG_20251011_075159_301_-346541510_zvf9fs.jpg";
+const EventDecor21 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767196496/IMG_20251011_074030_793_316131952_heb1mh.jpg";
 
 //Birthday Cake
 const BirthdayDecoration1 =
@@ -112,7 +124,7 @@ export default function Decorations() {
   const WeddingDecorations = [
     {
       id: 1,
-      image: wedDecor,
+      image: wedDecor19,
       alt: "Wedding Decorations",
     },
     {
@@ -200,6 +212,11 @@ export default function Decorations() {
       image: wedDecor18,
       alt: "Wedding Decorations",
     },
+    {
+      id: 19,
+      image: wedDecor,
+      alt: "Wedding Decorations",
+    },
   ];
 
   //Event Decoration
@@ -282,6 +299,31 @@ export default function Decorations() {
     {
       id: 16,
       image: EventDecor16,
+      alt: "Event Decorations",
+    },
+    {
+      id: 17,
+      image: EventDecor17,
+      alt: "Event Decorations",
+    },
+    {
+      id: 18,
+      image: EventDecor18,
+      alt: "Event Decorations",
+    },
+    {
+      id: 19,
+      image: EventDecor19,
+      alt: "Event Decorations",
+    },
+    {
+      id: 20,
+      image: EventDecor20,
+      alt: "Event Decorations",
+    },
+    {
+      id: 21,
+      image: EventDecor21,
       alt: "Event Decorations",
     },
   ];

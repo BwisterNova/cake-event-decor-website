@@ -29,8 +29,12 @@ const pastries3 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440177/pastries3_x4g7bz.jpg";
 const pastries5 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440162/pastries5_iltswk.jpg";
+const pastries6 =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767181232/IMG_20251130_090041_133_-1772721384_qkppbt.jpg";
 const meatPie2 =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1755440180/meatPie2_jhukz9.jpg";
+const partyfood =
+  "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767196422/24f0578846d80f8ab1ebee1d5079eb22_ge1yjo.jpg";
 
 export default function SmallChops() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -95,6 +99,16 @@ export default function SmallChops() {
       id: 12,
       image: meatPie2,
       alt: "Meat Pie",
+    },
+    {
+      id: 13,
+      image: pastries6,
+      alt: "Small CHops",
+    },
+    {
+      id: 14,
+      image: partyfood,
+      alt: "Party Food",
     },
   ];
 
