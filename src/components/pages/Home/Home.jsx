@@ -196,7 +196,7 @@ export default function Home() {
               <p>
                 Full-service event planning to make your special day perfect. We
                 handle everything from venue selection to day of coordination,
-                ensuring a stres free experience.
+                ensuring a stress free experience.
               </p>
             </div>
             <div
