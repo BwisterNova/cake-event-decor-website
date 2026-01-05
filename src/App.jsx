@@ -1,5 +1,4 @@
 import "./App.css";
-import { Navigate } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import NavBar from "./components/layoutComponents/Navbar";
@@ -12,6 +11,9 @@ import Contact from "./components/pages/Contact/Contact";
 import Galleries from "./components/pages/Gallery/Galleries";
 
 import CakeGallery from "./components/pages/Gallery/NavSetions/CakeGallery/CakeGallery";
+import Decorations from "./components/pages/Gallery/NavSetions/Decorations/Decorations";
+import SmallChops from "./components/pages/Gallery/NavSetions/SmallChops/SmallChops";
+import VideoTab from "./components/pages/Gallery/NavSetions/Videos/VideoTab";
 import { FiArrowUp } from "react-icons/fi";
 import PageNotFound from "./components/layoutComponents/PageNotFound/PageNotFound";
 
@@ -45,13 +47,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/gallery" element={<Galleries />}>
-            <Route index element={<Navigate to="/cakes" />} />
-          </Route>
+          <Route path="/gallery" element={<Galleries />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/*Gallary nav links */}
+          {/*Direct gallery links */}
           <Route path="/cakes" element={<CakeGallery />} />
+          <Route path="/decorations" element={<Decorations />} />
+          <Route path="/small-chops" element={<SmallChops />} />
+          <Route path="/videos" element={<VideoTab />} />
 
           {/*For the No Page */}
           <Route path="*" element={<PageNotFound />} />

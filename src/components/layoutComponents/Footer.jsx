@@ -67,19 +67,19 @@ export default function Footer() {
             </p>
             <div className={styles.socials}>
               <a
-                href="https://www.instagram.com/arubuola.yemi/?igsh=YzljYTk1ODg3Zg%3D%3D"
+                href="https://www.instagram.com/defavour_event?igsh=amp2OGgyNm56Mnln"
                 aria-label="Visit our Instagram page"
               >
                 <FaInstagram />
               </a>
               <a
-                href="https://web.facebook.com/profile.php?id=100090537637804#"
+                href="https://www.facebook.com/profile.php?id=100080464676031"
                 aria-label="Visit our Facebook page"
               >
                 <FaFacebookF />
               </a>
               <a
-                href="https://www.tiktok.com/@yemi.arubuola.def"
+                href="https://vm.tiktok.com/ZSHE5TCXYRoyq-DSofU/"
                 aria-label="Visit our TikTok page"
               >
                 <FaTiktok />

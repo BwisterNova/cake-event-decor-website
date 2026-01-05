@@ -174,6 +174,10 @@ export default function About() {
           name="description"
           content="Learn about DE-Favour Cakes & Events, our story, mission, and commitment to quality cakes and event decorations."
         />
+        <meta
+          property="og:url"
+          content="https://defavourcakeandevents.com/about-us"
+        />
       </Helmet>
       <main className={styles.main}>
         {/* About Background */}

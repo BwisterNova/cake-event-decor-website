@@ -50,6 +50,10 @@ export default function Contact() {
           name="description"
           content="Get in touch with DE-Favour for inquiries about cakes, event decorations, and services. Contact us today!"
         />
+        <meta
+          property="og:url"
+          content="https://defavourcakeandevents.com/contact"
+        />
       </Helmet>
       <main className={styles.main}>
         <motion.div

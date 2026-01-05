@@ -115,7 +115,7 @@ export default function Home() {
           property="og:image"
           content="https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703802/StageDecor_dqo0fq.png"
         />
-        <meta property="og:url" content="https://yourdomain.com" />
+        <meta property="og:url" content="https://defavourcakeandevents.com" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className={styles.main}>

@@ -65,6 +65,10 @@ export default function Services() {
           name="description"
           content="Explore our services including custom cakes, event decorations, catering, and more for your special events."
         />
+        <meta
+          property="og:url"
+          content="https://defavourcakeandevents.com/services"
+        />
       </Helmet>
       <main>
         {/*Hero Section */}

@@ -10,6 +10,7 @@ export default function PageNotFound() {
           name="description"
           content="The page you are looking for does not exist. Return to our homepage."
         />
+        <meta property="og:url" content="https://defavourcakeandevents.com" />
       </Helmet>
       <div className={styles.NoPageContainer}>
         <div className={styles.noPagetext}>

@@ -24,6 +24,10 @@ export default function Galleries() {
           name="description"
           content="Browse our gallery of beautiful cakes, event decorations, and small chops for inspiration."
         />
+        <meta
+          property="og:url"
+          content="https://defavourcakeandevents.com/gallery"
+        />
       </Helmet>
       <section className={styles.heroSection} id="gallery-tabs">
         <div className={styles.heroContent}>
