@@ -117,6 +117,7 @@ export default function Home() {
         />
         <meta property="og:url" content="https://defavourcakeandevents.com" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" type="image/png" href="/defavour.png" />
       </Helmet>
       <main className={styles.main}>
         {/* Hero Section */}
