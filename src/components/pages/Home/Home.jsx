@@ -104,7 +104,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="cake maker in Atan, cake training, cake making in Ogun State, cake making in Lagos State, cake making in Nigeria, decorator in Atan, event planner in Atan, event planning in Ogun State, event planning in Lagos State, event planning in Nigeria, cake decorator, pastry chef, birthday cakes, wedding cakes, small chops,cakes, event decorations, catering, birthday cakes, wedding cakes, small chops, Nigeria"
+          content="best cake and event website, best birthday cake ogun, online cake shop near me, online cake shop website, event planner in ogun state, party decorator, wedding decoration services, decorator near me wedding, decoration for parties near me, event decorator, birthday, cake delivery, custom cakes, event planning services, wedding planner lagos"
         />
         <meta property="og:title" content="DE-Favour Cakes and Events" />
         <meta
