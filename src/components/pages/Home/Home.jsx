@@ -115,7 +115,7 @@ export default function Home() {
           property="og:image"
           content="https://res.cloudinary.com/diwmaqpd8/image/upload/v1766703802/StageDecor_dqo0fq.png"
         />
-        <meta property="og:url" content="https://defavourcakeandevents.com" />
+        <meta property="og:url" content="https://defavourcakeandevents.com/" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/defavour.png" />
         <link rel="canonical" href="https://defavourcakeandevents.com/" />
