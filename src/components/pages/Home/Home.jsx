@@ -12,11 +12,11 @@ const EventDecor =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767181249/IMG_20251011_123516_889_-243666080_xqda0a.jpg";
 const decor =
   "https://res.cloudinary.com/diwmaqpd8/image/upload/v1767196487/IMG_20251011_075750_684_-556779275_hlfzxq.jpg";
-const GallerySection = React.lazy(() =>
-  import("./SectionsAdded/GallerySection/GallerySection")
+const GallerySection = React.lazy(
+  () => import("./SectionsAdded/GallerySection/GallerySection"),
 );
-const TestimonialsSection = React.lazy(() =>
-  import("./SectionsAdded/TestimonialsSection/TestimonialsSection")
+const TestimonialsSection = React.lazy(
+  () => import("./SectionsAdded/TestimonialsSection/TestimonialsSection"),
 );
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
       ([entry]) => {
         if (entry.isIntersecting) setWelcomeVisible(true);
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (welcomeRef.current) observer.observe(welcomeRef.current);
     return () => observer.disconnect();
@@ -55,7 +55,7 @@ export default function Home() {
       ([entry]) => {
         if (entry.isIntersecting) setServicesVisible(true);
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (servicesRef.current) observer.observe(servicesRef.current);
     return () => observer.disconnect();
@@ -67,7 +67,7 @@ export default function Home() {
       ([entry]) => {
         if (entry.isIntersecting) setGalleryVisible(true);
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (galleryRef.current) observer.observe(galleryRef.current);
     return () => observer.disconnect();
@@ -79,7 +79,7 @@ export default function Home() {
       ([entry]) => {
         if (entry.isIntersecting) setTestimonialsVisible(true);
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (testimonialsRef.current) observer.observe(testimonialsRef.current);
     return () => observer.disconnect();
@@ -96,7 +96,7 @@ export default function Home() {
     <div>
       <Helmet>
         <title>
-          DE-Favour Cakes & Events - Premium Cakes and Event Decorations
+          DE-Favour Cakes & Events - Exquisite Cakes and Event Decorations
         </title>
         <meta
           name="description"
@@ -104,12 +104,12 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="best cake and event website, best birthday cake ogun, online cake shop near me, online cake shop website, event planner in ogun state, party decorator, wedding decoration services, decorator near me wedding, decoration for parties near me, event decorator, birthday, cake delivery, custom cakes, event planning services, wedding planner lagos"
+          content="exotic cakes, event planning, decorations, wedding cakes, birthday cakes, corporate events, memorable occasions, cake making, online event service, online cake delivery"
         />
         <meta property="og:title" content="DE-Favour Cakes and Events" />
         <meta
           property="og:description"
-          content="Premium cakes and event decorations for your special occasions."
+          content="Exquisite cakes and event decorations for your special occasions."
         />
         <meta
           property="og:image"
@@ -118,6 +118,7 @@ export default function Home() {
         <meta property="og:url" content="https://defavourcakeandevents.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/defavour.png" />
+        <link rel="canonical" href="https://defavourcakeandevents.com/" />
       </Helmet>
       <main className={styles.main}>
         {/* Hero Section */}

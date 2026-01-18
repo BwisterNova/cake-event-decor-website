@@ -59,7 +59,7 @@ export default function About() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     const cards = cardsSectionRef.current?.querySelectorAll(`.${styles.card}`);
@@ -78,7 +78,7 @@ export default function About() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     const cards = whyChooseUsRef.current?.querySelectorAll(`.${styles.card}`);
@@ -97,7 +97,7 @@ export default function About() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (founderSectionRef.current) observer.observe(founderSectionRef.current);
@@ -115,7 +115,7 @@ export default function About() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (celebrateSectionRef.current)
@@ -134,7 +134,7 @@ export default function About() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (getInTouchRef.current) observer.observe(getInTouchRef.current);
@@ -177,6 +177,10 @@ export default function About() {
         <meta
           property="og:url"
           content="https://defavourcakeandevents.com/about-us"
+        />
+        <link
+          rel="canonical"
+          href="https://defavourcakeandevents.com/about-us"
         />
       </Helmet>
       <main className={styles.main}>

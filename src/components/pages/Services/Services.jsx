@@ -69,6 +69,10 @@ export default function Services() {
           property="og:url"
           content="https://defavourcakeandevents.com/services"
         />
+        <link
+          rel="canonical"
+          href="https://defavourcakeandevents.com/services"
+        />
       </Helmet>
       <main>
         {/*Hero Section */}

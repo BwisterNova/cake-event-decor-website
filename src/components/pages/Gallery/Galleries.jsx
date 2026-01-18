@@ -28,6 +28,10 @@ export default function Galleries() {
           property="og:url"
           content="https://defavourcakeandevents.com/gallery"
         />
+        <link
+          rel="canonical"
+          href="https://defavourcakeandevents.com/gallery"
+        />
       </Helmet>
       <section className={styles.heroSection} id="gallery-tabs">
         <div className={styles.heroContent}>

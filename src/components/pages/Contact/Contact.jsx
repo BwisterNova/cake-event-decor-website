@@ -54,6 +54,10 @@ export default function Contact() {
           property="og:url"
           content="https://defavourcakeandevents.com/contact"
         />
+        <link
+          rel="canonical"
+          href="https://defavourcakeandevents.com/contact"
+        />
       </Helmet>
       <main className={styles.main}>
         <motion.div
