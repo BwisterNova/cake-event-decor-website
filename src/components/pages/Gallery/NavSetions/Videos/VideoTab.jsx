@@ -47,6 +47,12 @@ const video22 =
   "https://res.cloudinary.com/diwmaqpd8/video/upload/v1767196623/245945d5-5910-4ecf-a9b7-7f090f054899-watermark_pdt309.mp4";
 const video23 =
   "https://res.cloudinary.com/diwmaqpd8/video/upload/v1767196681/0f5e4270d1b24cb58aeb46938ae07542_mmjbis.mp4";
+const video24 =
+  "https://res.cloudinary.com/diwmaqpd8/video/upload/v1769628622/VID-20260125-WA0040_xbchor.mp4";
+const video25 =
+  "https://res.cloudinary.com/diwmaqpd8/video/upload/v1769628624/VID-20260125-WA0041_hl6syv.mp4";
+const video26 =
+  "https://res.cloudinary.com/diwmaqpd8/video/upload/v1769628627/VID-20260125-WA0042_up2sfo.mp4";
 
 export default function VideoTab() {
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -182,6 +188,21 @@ export default function VideoTab() {
       src: video23,
       alt: "Videos",
     },
+    {
+      id: 22,
+      src: video24,
+      alt: "Videos",
+    },
+    {
+      id: 23,
+      src: video25,
+      alt: "Videos",
+    },
+    {
+      id: 24,
+      src: video26,
+      alt: "Videos",
+    },
   ];
 
   return (
@@ -202,10 +223,10 @@ export default function VideoTab() {
               src={video.src}
               loop
               muted
-              autoPlay
               playsInline
               className={styles.video}
               alt={video.alt}
+              loading="lazy"
             />
             <div className={styles.title}>{video.title}</div>
           </motion.div>
